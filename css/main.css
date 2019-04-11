@@ -1,0 +1,64 @@
+html, body{
+	margin: 0;
+	padding: 0;
+	background-color: #AAA;
+	height: 100%;
+}
+
+canvas{
+	display: block;
+	background-color: #FFF;
+	width: 60%;
+}
+
+#main{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#left{
+	width: 50%;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#right{
+	width: 50%;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+	canvas{
+		width: 100%;
+	}
+	#main{
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: space-around;
+		align-items: center;
+	}
+	
+	#left{
+		width: 100%;
+	}
+	
+	#right{
+		width: 100%;
+	}	
+}
+
+button{
+	min-width: 30%;
+	min-height: 30px;
+}
