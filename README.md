@@ -8,7 +8,7 @@ Live version [here](https://victorribeiro.com/digitRecognition)
 
 ## About
 
-I made this to test how long it would take to train my neural network with MNIST and accurate it would be at the end. Turns out I have a long way to go.
+I made this experiment to test how long it would take to train my neural network with MNIST and how accurate it would be at the end. Turns out I have a long way to go.
 
 ## How to use it
 
