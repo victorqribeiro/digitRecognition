@@ -26,8 +26,8 @@ function init(){
 	c.fillRect(0,0,size,size);
 	c.fillStyle = "black";
 
-	const main = document.createElement('div');
-	main.id = "main";
+	const main = document.getElementById('main');
+	main.innerHTML = "";
 
 	const left = document.createElement('div');
 	left.id = "left";
