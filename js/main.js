@@ -12,7 +12,7 @@ load();
 
 function init(){
 
-	nn = new MLP();
+	nn = new Dejavu();
 	
 	nn.load( n );
 
@@ -101,9 +101,10 @@ const predict = function(){
 		let resizedImg = cT.getImageData(0,0,28,28);
 		let finalData = Array(28*28);
 		for(let i = 0; i < finalData.length; i++){
-			finalData[i] = 255-resizedImg.data[ i * 4 ];
+			finalData[i] = (255-resizedImg.data[ i * 4 ])/255;
 		}
 		let res = nn.predict( finalData ).data;
+		console.log( res );
 		let _min = -Infinity;
 		let index = -1;
 		for(let i = 0; i < res.length; i++){

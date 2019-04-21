@@ -1,6 +1,6 @@
 # Digit Recognition
 
-Implementation of a digit recognition using my [neural network ](https://github.com/victorqribeiro/mlp) with [MNIST](http://lorenhoward.com/articles/mnist-handwritten-dataset-json/)
+Implementation of a digit recognition using a neural network with [MNIST](http://lorenhoward.com/articles/mnist-handwritten-dataset-json/)
 
 ![Digit Recognition](screenshot.png)
 

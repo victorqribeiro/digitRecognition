@@ -15,7 +15,8 @@ class Matrix {
 	multiply(b){
 	
 		if( b.rows !== this.cols ){
-			return null;
+			throw new Error('Cols from Matrix A different from Rows of Matrix B');
+			return;
 		}
 		
 		let result = new Matrix( this.rows, b.cols );
@@ -46,16 +47,20 @@ class Matrix {
 	}
 
 	add(a){
-		if( this.rows != a.rows || this.cols != a.cols )
-			return null
+		if( this.rows != a.rows || this.cols != a.cols ){
+			throw new Error('Cant add Matrix of different sizes!');
+			return;
+		}
 		for(let i = 0; i < this.data.length; i++){
 			this.data[i] += a.data[i];
 		}
 	}
 	
 	subtract(a){
-		if( this.rows != a.rows || this.cols != a.cols )
-			return null
+		if( this.rows != a.rows || this.cols != a.cols ){
+			throw new Error('Cant subtract Matrix of different sizes!');
+			return;
+		}
 		for(let i = 0; i < this.data.length; i++){
 			this.data[i] -= a.data[i];
 		}
@@ -68,8 +73,10 @@ class Matrix {
 	}
 
 	hadamard(a){
-		if( this.rows != a.rows || this.cols != a.cols )
-			return null
+		if( this.rows != a.rows || this.cols != a.cols ){
+			throw new Error('Cant multiply Matrix of different sizes!');
+			return;
+		}
 		for(let i = 0; i < this.data.length; i++){
 			this.data[i] *= a.data[i];
 		}

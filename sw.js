@@ -1,8 +1,8 @@
 const filesToCache = [
     	'./',
       './index.html',
-      './js/Matrix2.js',
-      './js/MLP.js',
+      './js/Matrix.js',
+      './js/Dejavu.js',
       './js/main.js',
       './data/nn.json',
       './css/main.css',
@@ -10,7 +10,7 @@ const filesToCache = [
       './manifest.json'
  ];
 
-const staticCacheName = 'digitrecognition-v1';
+const staticCacheName = 'digitrecognition-v2';
 
 self.addEventListener('install', event => {
   event.waitUntil(
