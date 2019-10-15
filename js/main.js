@@ -104,7 +104,6 @@ const predict = function(){
 			finalData[i] = (255-resizedImg.data[ i * 4 ])/255;
 		}
 		let res = nn.predict( finalData ).data;
-		console.log( res );
 		let _min = -Infinity;
 		let index = -1;
 		for(let i = 0; i < res.length; i++){
@@ -123,12 +122,15 @@ const getPos = function(e){
 	let x, y;
 	let rect = canvas.getBoundingClientRect();
 	
+	const _x = canvas.width/rect.width,
+				_y = canvas.height/rect.height;
+	
 	if( e.touches ){
-		x = e.targetTouches[0].pageX - rect.left;
-		y = e.targetTouches[0].pageY - rect.top;
+		x = (e.targetTouches[0].pageX - rect.left) * _x;
+		y = (e.targetTouches[0].pageY - rect.top) * _y;
 	}else{
-		x = e.offsetX * canvas.width/rect.width;
-		y = e.offsetY * canvas.height/rect.height;
+		x = e.offsetX * _x;
+		y = e.offsetY * _y;
 	}
 	return {x, y};
 }
